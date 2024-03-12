@@ -39,24 +39,23 @@ export default {
     background: #e4e4e4;
 }
 .admin{
-    margin-top: 60px;
+    margin-top: 71px;
     display: grid;
     grid-template-columns: 300px auto;
 }
-.admin_content {
-    margin-top:60px;
 
-}
 .admin_content_wrapper{
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 55px 75px;
+    padding:  75px;
 }
 .map_content {
     display: flex;
     justify-content: center;
     background: white;
     border-radius: 21px;
+    height: 400px;
+    padding-top: 20px;
 }
 
 

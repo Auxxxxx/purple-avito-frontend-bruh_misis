@@ -62,7 +62,7 @@ export default {
 }
 .h1{
     font-size:50px;
-    font-weight: 700;
+    font-weight: bold;
 }
 .profile_photo{
     background: #F2F2F2;
