@@ -36,9 +36,7 @@ export default {
     }
 }
 </script>
-
 <style scoped>
-
 .main{
     background: #e4e4e4;
 }
@@ -46,22 +44,19 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     height: 100vh;
 }
 .admin_content {
-    position:relative;
     margin-top:60px;
+
 }
 .admin_content_wrapper{
-    padding: 30px 50px;
+    padding: 30px;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-gap: 30px; /* Добавлено */
+    grid-gap: 30px;
     margin-bottom:auto;
-    
 }
-
 .admin_content_left, .admin_content_right {
     display: flex;
     flex-direction: column;
@@ -70,8 +65,9 @@ export default {
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    padding: 20px; /* Добавлено */
+    padding: 20px; 
 }
+
 .map_content {
     text-align: center;
     background: white;
@@ -84,6 +80,7 @@ export default {
     display: flex;
     margin-left: 65px;
 }
+
 
 
 </style>

@@ -55,6 +55,7 @@ const expandNode = (node) => {
 .card{
     width: 400px;
     height: 250px;
+    background: #F2F2F2;
 }
 
 </style>

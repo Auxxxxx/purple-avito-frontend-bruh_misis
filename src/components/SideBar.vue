@@ -49,6 +49,7 @@ export default {
     position: fixed;
     height:100%;
     margin-top:60px;
+    z-index: 100;
 }
 
 .side_search{

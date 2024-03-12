@@ -55,9 +55,6 @@ export default {
 .map_component_title{
     font-size: 26px;
 }
-.map_component{
-    position: relative;
-}
 .map_sup{
     color:#C6C6C6;
     font-weight: 200;
