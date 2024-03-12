@@ -45,18 +45,13 @@ export default {
 <style scoped>
 
 .sideBg{
-    background-color: #e4e4e4;
-    position: fixed;
-    height:100%;
-    margin-top:60px;
-    z-index: 100;
+    background-color: #e4e4e4;  
 }
 
 .side_search{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
-    text-align: center;
     margin: 25px 0 0 59px;
 }
 
@@ -74,7 +69,6 @@ export default {
     width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
     height: 100vh;
 }
 

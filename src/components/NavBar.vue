@@ -18,14 +18,11 @@
     padding:15px;
     display: flex;
     flex-direction: row-reverse;
-    position: fixed;
     width: 100%;
-    z-index: 100;
 }
 
 .navBar nav{
     display: flex;
-    float:right;
 }
 
 .nav-link {
@@ -41,7 +38,6 @@
     height: 40px;
     position: absolute; 
     left: 50%; /* Добавлено */
-    transform: translateX(-50%);
-
 }
+
 </style>
