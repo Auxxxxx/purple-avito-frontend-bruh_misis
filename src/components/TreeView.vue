@@ -10,44 +10,41 @@
     </div>
 </template>
 
-<script setup>
-import { ref, onMounted } from 'vue';
+<script>
 import { NodeService } from '@/service/NodeService';
 
-const nodes = ref(null);
+export default {
+    data() {
+        return {
+            nodes: null,
+            expandedKeys: {}
+        };
+    },
+    mounted() {
+        NodeService.getTreeNodesData().then(data => this.nodes = data);
+    },
+    methods: {
+        expandAll() {
+            for (let node of this.nodes) {
+                this.expandNode(node);
+            }
 
-onMounted(async () => {
-    try {
-        const data = await NodeService.getTreeNodes();
-        nodes.value = data;
-    } catch (error){
-        console.log('Error loading tree nodes', error);
-    }
-});
+            this.expandedKeys = { ...this.expandedKeys };
+        },
+        collapseAll() {
+            this.expandedKeys = {};
+        },
+        expandNode(node) {
+            this.expandedKeys[node.key] = true;
 
-const expandedKeys = ref({});
-
-const expandAll = () => {
-    for (let node of nodes.value) {
-        expandNode(node);
-    }
-
-    expandedKeys.value = { ...expandedKeys.value };
-};
-
-const collapseAll = () => {
-    expandedKeys.value = {};
-};
-
-const expandNode = (node) => {
-    expandedKeys.value[node.key] = true;
-
-    if (node.children && node.children.length) {
-        for (let child of node.children) {
-            expandNode(child);
+            if (node.children && node.children.length) {
+                for (let child of node.children) {
+                    this.expandNode(child);
+                }
+            }
         }
     }
-};
+}
 
 </script>
 

@@ -6,7 +6,7 @@
 
             <a class="nav-link notification" href="#"><i class="pi pi-bell"></i></a>
 
-            <a class="nav-link profile" aria-disabled="true" href="/profile"><i class="pi pi-user"></i></a>
+            <a class="nav-link profile" aria-disabled="true"  @click="$router.push('/profile')"><i class="pi pi-user"></i></a>
         </nav>
     </div>
 </template>
