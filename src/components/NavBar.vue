@@ -1,12 +1,12 @@
 <template>
     <div class="navBar">
         <nav>
-            <img src='@/icons/LogoLoginForm.png' class='nav-bar-logo' >
-            <a class="nav-link messages" aria-current="page" href="#"><i class="pi pi-comment"></i></a>
+            <img src='@/icons/LogoLoginForm.png' class='nav-bar-logo'>
+            <a class="nav-link messages" aria-current="page" href=""><i class="pi pi-comment"></i></a>
 
             <a class="nav-link notification" href="#"><i class="pi pi-bell"></i></a>
 
-            <a class="nav-link profile" aria-disabled="true"><i class="pi pi-user"></i></a>
+            <a class="nav-link profile" aria-disabled="true" href="/profile"><i class="pi pi-user"></i></a>
         </nav>
     </div>
 </template>

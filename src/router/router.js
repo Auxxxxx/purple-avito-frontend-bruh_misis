@@ -5,6 +5,7 @@ import LoginForm from "@/pages/LoginForm";
 import PriceMatrix from "@/pages/PriceMatrix";
 import ControlPrices from "@/pages/ControlPrices.vue";
 import Analytics from "@/pages/Analytics.vue";
+import ProfilePage from "@/pages/ProfilePage.vue";
 
 const routes = [
     {
@@ -26,6 +27,10 @@ const routes = [
     {
         path: '/analytics',
         component: Analytics
+    },
+    {
+        path: '/profile',
+        component: ProfilePage
     }
 ]
 
