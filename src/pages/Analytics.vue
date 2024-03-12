@@ -1,8 +1,8 @@
 <template>
     <div class="main">
-        <side-bar/>
+        <nav-bar/>    
         <div class="price">
-            <nav-bar/>
+            <side-bar/>
             <div class="analytics_content">
                 
             </div>
@@ -15,12 +15,10 @@
 
 import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
-import TreeComponent from '@/components/TreeComponent';
-import MapComponent from '@/components/MapComponent';
 
 export default {
     components: {
-        SideBar, NavBar, TreeComponent, MapComponent
+        SideBar, NavBar
     }
 }
 </script>
@@ -31,18 +29,8 @@ export default {
     background: #e4e4e4;
 }
 .price{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px auto;
 }
-.analytics_content{
-    position:relative;
-    margin-top:60px;
-}
-
-
-
 
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div class="main">
-        <side-bar/>
+        <nav-bar/>    
         <div class="price">
-            <nav-bar/>
+            <side-bar/>
             <div class="price_content">
                 <matrix-prime />
             </div>
@@ -29,17 +29,10 @@ export default {
 .main{
     background: #e4e4e4;
 }
+
 .price{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-}
-.price_content {
-    position:relative;
-    margin-top:60px;
-    margin-left:200px;
+    display: grid;
+    grid-template-columns: 300px auto;
 }
 
 </style>
