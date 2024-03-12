@@ -27,14 +27,19 @@ export default {
 <style scoped>
 
 .main{
-    display: grid;
-    grid-template-columns: 300px auto;
-    background-color: #e4e4e4;
+    background: #e4e4e4;
 }
-
-.price_content{
-    background-color: #F3F3F3;
-    border-radius: 21px 0 0 0;
+.price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+.price_content {
+    position:relative;
+    margin-top:60px;
+    margin-left:200px;
 }
 
 </style>

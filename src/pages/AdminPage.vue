@@ -1,7 +1,6 @@
 <template>
     <div class="main">
         <side-bar/>
-        <!-- DASHBOARD -->
         <div class="admin">
             <nav-bar/>
             <div class="admin_content">
@@ -41,30 +40,38 @@ export default {
 <style scoped>
 
 .main{
-    display: grid;
-    grid-template-columns: 300px auto;
-    background-color: #e4e4e4;
+    background: #e4e4e4;
 }
-
-.admin_content{
-    background-color: #F3F3F3;
-    width: 100%;
+.admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     height: 100vh;
-    border-radius: 21px 0 0 0;
 }
-
+.admin_content {
+    position:relative;
+    margin-top:60px;
+}
 .admin_content_wrapper{
     padding: 30px 50px;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-gap: 30px; /* Добавлено */
+    margin-bottom:auto;
+    
 }
 
-.admin_content_left{
+.admin_content_left, .admin_content_right {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 20px; /* Добавлено */
 }
-
 .map_content {
     text-align: center;
     background: white;

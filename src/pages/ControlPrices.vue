@@ -28,19 +28,19 @@ export default {
 <style scoped>
 
 .main{
-    display: grid;
-    grid-template-columns: 300px auto;
-    background-color: #e4e4e4;
+    background: #e4e4e4;
 }
-
-.control_price_content{
-    background-color: #F3F3F3;
-    width: 100%;
+.price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     height: 100vh;
-    border-radius: 21px 0 0 0;
 }
-
-
+.control_price_content {
+    position:relative;
+    margin-top:60px;
+}
 
 
 </style>

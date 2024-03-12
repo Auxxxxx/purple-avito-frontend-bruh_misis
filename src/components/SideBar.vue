@@ -1,9 +1,5 @@
 <template>
     <div class="sideBg">
-        <!-- LOGO -->
-        <div class="side-logo">
-            <a class="navBar-logo"><img src="@/icons/LogoLoginForm.png" alt="Avito">Avito</a>
-        </div>
         <div class="side_search">
             <i class="pi pi-search"></i>
             <input type="text" placeholder="поиск..." class="side_search_input">
@@ -50,6 +46,9 @@ export default {
 
 .sideBg{
     background-color: #e4e4e4;
+    position: fixed;
+    height:100%;
+    margin-top:60px;
 }
 
 .side_search{
@@ -75,6 +74,7 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    height: 100vh;
 }
 
 .side-logo{
