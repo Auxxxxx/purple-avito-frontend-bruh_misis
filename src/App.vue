@@ -5,16 +5,18 @@
 </template>
 
 <script>
+import SideBar from './components/SideBar.vue';
 
-export default{
-
+export default {
+  components: {
+    SideBar
+  }
 }
-
 </script>
 
 <style scoped>
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }

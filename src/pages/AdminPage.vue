@@ -46,6 +46,7 @@ export default {
     align-items: center;
     height: 100vh;
 }
+
 .admin_content {
     margin-top:60px;
 
