@@ -1,23 +1,26 @@
 <template>
   <div class="page">
+    <div v-if="isPostsLoading" class="loading-container">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Загрузка...</span>
+      </div>
+    </div>
     <div class="contImage"></div>
     <div class="container">
-        <div v-show="step === 1" class="step">
-          <div class="textLog">
-            <h1>Вход</h1>
-
-          </div>
-          <div class="form-group2">
-            <input v-model="Login1" type="text" class="form-control " id="Login1" placeholder="Логин" ref="loginInput">
-          </div>
-          
-          <div class="form-group3">
-            <button @click="validateInput" class="btn btn-primary ">Войти</button>
-          </div>
-          <div class="form-group4">
-            <span class="textInfo">Узнать свой логин можно у администратора сайта</span>
-          </div>
+      <div v-show="step === 1" class="step">
+        <div class="textLog">
+          <h1>Вход</h1>
         </div>
+        <div class="form-group2">
+          <input v-model="Login1" type="text" class="form-control" id="Login1" placeholder="Логин" ref="loginInput">
+        </div>
+        <div class="form-group3">
+          <button @click="validateInput" class="btn btn-primary">Войти</button>
+        </div>
+        <div class="form-group4">
+          <span class="textInfo">Узнать свой логин можно у администратора сайта</span>
+        </div>
+      </div>
     </div>
     <div class="form-group5">
       <h1 class="TextName">Avito</h1>
@@ -30,23 +33,28 @@ export default {
   data() {
     return {
       step: 1,
-      formReg: {
-        Login1: '',
-        errorMessage: '',
-      }
+      Login1: '',
+      errorMessage: '',
+      isPostsLoading: false, // Состояние загрузки
     }
   },
   methods: {
-    validateInput(){
-      if(this.Login1 && this.Login1.length > 1){
-        this.$router.push('/admin'); 
+    validateInput() {
+      if (this.Login1 && this.Login1.length > 1) {
+        this.isPostsLoading = true; // Начало загрузки
+        // Имитация процесса загрузки, замените на реальный запрос
+        setTimeout(() => {
+          this.$router.push('/admin');
+          this.isPostsLoading = false; // Загрузка завершена
+        }, 1000);
       } else {
-        }
+        this.errorMessage = 'Логин должен быть длиннее одного символа.';
       }
     }
   }
-
+}
 </script>
+
 
 <style scoped>
 
@@ -147,5 +155,17 @@ export default {
   transform: translate(-50%, -50%);
   z-index: 1; 
   background-size: 100%;
+}
+.loading-container {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: rgba(255, 255, 255, 0.7); 
+  z-index: 1000; 
 }
 </style>
