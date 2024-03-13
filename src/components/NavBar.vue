@@ -54,6 +54,26 @@ export default{
 
 <style scoped>
 
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.notification:hover .pi-bell {
+  display: inline-block;
+  animation: swing 1s ease-in-out infinite;
+}
+.nav-link.profile:hover .pi-user {
+  transform: scale(1.5); /* Увеличивает иконку в 1.5 раза */
+  transition: transform 0.3s ease-in-out; /* Добавляет плавность анимации */
+}
+.nav{
+    position: relative;
+}
 .navBar {
     background-color: #fff;
     padding:15px;
@@ -71,8 +91,8 @@ export default{
 }
 
 .navBar-search:hover, .navBar-search:focus{
-    border: 1px solid #a7f3d0;
-    box-shadow: 4px 4px 5px #a7f3d0, -4px -4px 5px #a7f3d0;
+    border: 1px solid #e4e4e4;
+    box-shadow: 4px 4px 5px  #e4e4e4, -4px -4px 5px #e4e4e4;
 }
 
 .navBar nav{

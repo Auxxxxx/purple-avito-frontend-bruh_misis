@@ -22,7 +22,7 @@ export const NodeService = {
           throw new Error('Ошибка HTTP:' + response.status);
         }
         console.log(response.data);
-        const data = await response.json();
+        const data = await response.data;
         return [data];
     } catch (error) {
         console.error('Error fetching tree nodes:', error);
@@ -30,23 +30,23 @@ export const NodeService = {
     }
   },
 
-  async getNodeChildren(id) {
-    try {
-        const response = await fetch(`http://localhost/category/${id}`); // Замените на реальный URL вашего сервера
-        if(!response.ok){
-          throw new Error('Ошибка HTTP:' + response.status);
-        }
-        const data = await response.data;
-        console.log(data);
-        return [data];
-    } catch (error) {
-        console.error('Error fetching tree nodes:', error);
-        return [];
-    }
-  },
+  // async getNodeChildren(id) {
+  //   try {
+  //       const response = await fetch(`http://localhost/category/${id}`); // Замените на реальный URL вашего сервера
+  //       if(!response.ok){
+  //         throw new Error('Ошибка HTTP:' + response.status);
+  //       }
+  //       const data = await response.data;
+  //       console.log(data);
+  //       return [data];
+  //   } catch (error) {
+  //       console.error('Error fetching tree nodes:', error);
+  //       return [];
+  //   }
+  // },
 
   async getTreeNodesCategory() {
-    return await Promise.resolve(this.getTreeNodesDataCategory());
+    return Promise.resolve(await this.getTreeNodesDataCategory());
   },
 
   getTreeNodesLocation() {
