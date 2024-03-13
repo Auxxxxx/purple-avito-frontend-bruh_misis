@@ -1,12 +1,13 @@
 
 <template>
     <div class="card">
-        <Tree 
-        :value="nodes" 
-        :filter="true" 
-        filterMode="lenient" 
-        
-        ></Tree>
+        <div class="tree-container" ref="treeContainer">
+            <Tree 
+            :value="nodes" 
+            :filter="true" 
+            filterMode="lenient" 
+            ></Tree>
+        </div>
     </div>
 </template>
 
@@ -17,21 +18,49 @@ export default {
     data() {
         return {
             nodes: null,
-            expandedKeys: {}
+            expandedKeys: {},
+            containerHeight: 300, // Высота контейнера дерева
         };
     },
-    async mounted() {
-        this.nodes = await NodeService.getTreeNodesData();
+    props:{
+        isLocation: {
+            type: Boolean,
+            required: true,
+        }
     },
+    async mounted() {
+        await NodeService.getTreeNodesCategory().then(data => this.nodes = data);
+    },
+
+    // async mounted() {
+    //     let treeData;
+    //     if(this.isLocation){
+    //         treeData = await NodeService.getTreeNodesLocation();
+    //     } else{
+    //         treeData = await NodeService.getTreeNodesCategory();
+    //     }
+    //     // Преобразуем полученные данные в нужный формат
+    //     this.nodes = treeData;
+    // },
     methods: {
+        // async loadInitialNodes() {
+        //     let treeData;
+        //     if (this.isLocation) {
+        //         treeData = await NodeService.getTreeNodesLocation();
+        //     } else {
+        //         treeData = await NodeService.getTreeNodesCategory();
+        //     }
+        //     // Ограничим количество отображаемых родительских узлов
+        //     this.nodes = treeData.slice(0, 15);
+        // },
+
         // async handleNodeExpand(node) {
-        // // Обработчик разворачивания узла
-        // if (node.children && node.children.length === 0) {
-        //     // Если у узла нет детей, загружаем их с сервера
-        //     const children = await NodeService.getNodeChildren(node.id);
-        //     // Обновляем данные узла
-        //     node.children = children;
-        // }
+        //     if (!node.children || node.children.length === 0) {
+        //         // Если у узла нет детей, загружаем их с сервера
+        //         const children = await NodeService.getNodeChildren(node.id);
+        //         // Обновляем данные узла
+        //         this.$set(node, 'children', children);
+        //     }
         // },
         expandAll() {
             for (let node of this.nodes) {
@@ -44,11 +73,11 @@ export default {
             this.expandedKeys = {};
         },
         expandNode(node) {
-            this.expandedKeys[node.id] = true;
+            this.expandedKeys[node.key] = true;
 
             if (node.children && node.children.length) {
                 for (let child of node.children) {
-                    this.expandNode(child); 
+                    this.expandNode(child);
                 }
             }
         }
@@ -73,5 +102,10 @@ export default {
     max-width: 300px; /* Максимальная ширина */
 }
 
+.tree-container {
+  max-height: 300px; /* Максимальная высота контейнера */
+  overflow-y: auto; /* Включить вертикальную прокрутку */
+  overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+}
 
 </style>

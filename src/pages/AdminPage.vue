@@ -6,10 +6,11 @@
             <div class="admin_content_wrapper">
                 <div class="admin_content">
                     <div class="admin_content_left">
-                        <tree-component :title="'выберите локацию'"/>
+                        <!-- <tree-component :title="'выберите локацию'" :isLocation="true"/> -->
+                        <TreeVue/>
                     </div>
                     <div class="admin_content_right">
-                        <tree-component :title="'выберите категорию'"/> 
+                        <tree-component :title="'выберите категорию'" :isLocation="false"/> 
                     </div>
                 </div>
                 <div class="map_content">  
@@ -26,10 +27,11 @@ import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 import TreeComponent from '@/components/TreeComponent';
 import MapComponent from '@/components/MapComponent';
+import TreeVue from '@/components/Tree';
 
 export default {
     components: {
-        SideBar, NavBar, TreeComponent, MapComponent
+        SideBar, NavBar, TreeComponent, MapComponent, TreeVue
     },
     data(){
       return {
