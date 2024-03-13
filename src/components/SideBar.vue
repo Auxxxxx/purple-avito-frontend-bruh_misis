@@ -10,8 +10,9 @@
                 <side-item :iconClass="'pi pi-chart-bar'" :sideText="'Ценовая матрица'"  @click="$router.push('/priceMatrix')"/>
                 <side-item :iconClass="'pi pi-chart-line'" :sideText="'Аналитика и отчеты'"  @click="$router.push('/analytics')"/>
                 <side-item :iconClass="'pi pi-comment'" :sideText="'Сообщения'"/>
+                
             </div>
-            <Button label="← Выход" @click="$router.push('/')" class="btn_exit"></Button>
+            <side-item :iconClass="'pi pi-sign-out'" :sideText="'Выход'" @click="$router.push('/')" />
         </aside>
     </div>
 </template>
@@ -49,7 +50,7 @@ export default {
 .side{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    max-height: 100%;
     margin-top: 90px;
 }
 
@@ -63,14 +64,5 @@ export default {
 .side_menu{
     margin: 15px 0;
 }
-
-.btn_exit{
-    border-radius: 15px;
-    width: 121px;
-    margin: 0 50px;
-    position: fixed;
-    bottom: 40px;
-}
-
 
 </style>

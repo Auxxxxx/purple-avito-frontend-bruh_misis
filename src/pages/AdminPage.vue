@@ -6,10 +6,12 @@
             <div class="admin_content_wrapper">
                 <div class="admin_content">
                     <div class="admin_content_left">
-                        <tree-component :title="'выберите локацию'"/>
+                        <h3>Выберите локацию</h3>
+                        <tree-component/>
                     </div>
                     <div class="admin_content_right">
-                        <tree-component :title="'выберите категорию'"/> 
+                        <h3>Выберите категорию</h3>
+                        <tree-component/> 
                     </div>
                 </div>
                 <div class="map_content">  
@@ -55,7 +57,6 @@ export default {
     display: grid;
     grid-template-columns: 300px auto;
 }
-
 .admin_content_wrapper{
     background: #e4e4e4;
     width: 100%;
@@ -69,17 +70,35 @@ export default {
     padding: 75px;
 }
 
-.admin_content_left{
+.admin_content_left, .admin_content_right{
     margin: 0px 20px 0px 0px;
-}
-
-
-.map_content {
-    display: flex;
+    background-color: #fff;
+    border-radius: 14.3px;
+    box-shadow: 4px 0px 11px #E6E6E6, -4px 0px 8px #E6E6E6;
+    display: flex; 
+    flex-direction: column;
     justify-content: center;
-    background: white;
-    border-radius: 21px;
-    padding-top: 20px;
+}
+.admin_content_left h3{
+    font-weight: 700;
+    text-align: center;
+    margin-top:20px;
+}
+.admin_content_right h3{
+    font-weight: 700;
+    text-align: center;
+    margin-top:20px;
+}
+.map_content {
+  display: flex;
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center; /* Вертикальное выравнивание */
+  background: white;
+  border-radius: 21px;
+  padding-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom:20px; /* Автоматические отступы слева и справа для центрирования */
 }
 
 

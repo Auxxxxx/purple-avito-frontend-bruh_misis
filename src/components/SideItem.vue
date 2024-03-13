@@ -36,12 +36,22 @@ export default {
     height: 40px;
     border-radius: 8px;   
     width: 235px;
-    /* box-shadow: 5px 5px 13px #DBDBDB, -5px -5px 13px #DBDBDB; */
 }
 
-.sideBar_item:hover{
-    border: 1px solid #04e061;
-}
+a {
+    color:#666;
+    background-image: linear-gradient(to right, #feffff, #e4e4e4); 
+    background-repeat: no-repeat; 
+    background-size: 0 100%; 
+    border-radius: 10px; 
+    text-decoration: none;
+    padding: 5px 15px; 
+    transition: 0.3s; 
+   }
+   a:hover {
+    background-size: 100% 100%; 
+   }
+
 
 .sideBar_item i{
     height: 20px;
@@ -57,7 +67,7 @@ export default {
 }
 
 .current-item{
-    border: 1px solid #04e061;
+    background: #e4e4e4;
 }
 
 </style>

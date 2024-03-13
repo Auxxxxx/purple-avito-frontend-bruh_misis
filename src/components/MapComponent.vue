@@ -54,6 +54,8 @@ export default {
 <style scoped>
 .map_component_title{
     font-size: 26px;
+    font-weight: 600;
+
 }
 
 .map_sup{
@@ -68,17 +70,10 @@ export default {
     height:300px;    
     border-radius: 16px;
     border: 1px solid black; 
-    width: 70vw;
+    width: 700px;
 }
 
-.map_content[data-v-001c8cec] {
-    display: flex;
-    justify-content: center;
-    background: white;
-    border-radius: 21px;
-    padding-top: 20px;
-    margin: 20px;
-}
+
 
 hr{
     width: 300px;
