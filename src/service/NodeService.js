@@ -2,7 +2,7 @@ export const NodeService = {
   
   async getTreeNodesData() {
       try {
-          const response = await fetch('http://localhost/location/'); // Замените на реальный URL вашего сервера
+          const response = await fetch('http://localhost/location/2'); // Замените на реальный URL вашего сервера
           if(!response.ok){
             throw new Error('Ошибка HTTP:' + response.status);
           }

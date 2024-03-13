@@ -5,7 +5,7 @@
         :value="nodes" 
         :filter="true" 
         filterMode="lenient" 
-        class="search-bar"
+        
         ></Tree>
     </div>
 </template>
@@ -43,15 +43,15 @@ export default {
         collapseAll() {
             this.expandedKeys = {};
         },
-        // expandNode(node) {
-        //     this.expandedKeys[node.id] = true;
+        expandNode(node) {
+            this.expandedKeys[node.id] = true;
 
-        //     if (node.children && node.children.length) {
-        //         for (let child of node.children) {
-        //             this.expandNode(child);
-        //         }
-        //     }
-        // }
+            if (node.children && node.children.length) {
+                for (let child of node.children) {
+                    this.expandNode(child); 
+                }
+            }
+        }
     }
 }
 

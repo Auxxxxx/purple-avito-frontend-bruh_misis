@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import AdminPage from "@/pages/AdminPage";
 import LoginForm from "@/pages/LoginForm";
 import PriceMatrix from "@/pages/PriceMatrix";
-import ControlPrices from "@/pages/ControlPrices.vue";
 import Analytics from "@/pages/Analytics.vue";
 import ProfilePage from "@/pages/ProfilePage.vue";
 
@@ -19,10 +18,6 @@ const routes = [
     {
         path: '/priceMatrix',
         component: PriceMatrix
-    },
-    {
-        path: '/controlPrices',
-        component: ControlPrices
     },
     {
         path: '/analytics',

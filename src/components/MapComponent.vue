@@ -1,7 +1,7 @@
 <template>
     <div class="map_component">
-    <div class="line-title">
-     <h3 class="map_component_title">{{ title }}<sup class="map_sup">10 км</sup></h3><hr>
+        <div class="line-title">
+        <h3 class="map_component_title">{{ title }}<sup class="map_sup">10 км</sup></h3><hr>
     </div>
     <div id="map" class="map" ref="mapContainer"></div>
 </div>
@@ -55,6 +55,7 @@ export default {
 .map_component_title{
     font-size: 26px;
 }
+
 .map_sup{
     color:#C6C6C6;
     font-weight: 200;
@@ -62,14 +63,22 @@ export default {
     line-height: 19.5px;
     font-family: "Montserrat" sans-serif;
 }
+
 .map{
-    height:300px;
-    width: 800px;    
+    height:300px;    
     border-radius: 16px;
     border: 1px solid black; 
-
+    width: 70vw;
 }
 
+.map_content[data-v-001c8cec] {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: 21px;
+    padding-top: 20px;
+    margin: 20px;
+}
 
 hr{
     width: 300px;

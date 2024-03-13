@@ -34,7 +34,6 @@ export default {
     margin-bottom:15px;
     margin-left:50px;
     height: 40px;
-    background-color: #F3F3F3;
     border-radius: 8px;   
     width: 235px;
     /* box-shadow: 5px 5px 13px #DBDBDB, -5px -5px 13px #DBDBDB; */
@@ -47,13 +46,14 @@ export default {
 .sideBar_item i{
     height: 20px;
     margin: 0 15px 0 0;
+    color: #584D4D;
 }
 
 .sideBar_item a{
-    color: black;
-    font-family: 'Soyuz Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 16px;    
+    color: #584D4D;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 17px;    
 }
 
 .current-item{

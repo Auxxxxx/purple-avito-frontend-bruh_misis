@@ -1,10 +1,8 @@
 <template>
     <div class="navBar">
+        <input type="search" placeholder="Поиск" class="navBar-search">
         <nav>
-            <img src='@/icons/LogoLoginForm.png' class='nav-bar-logo'>
-            <a class="nav-link messages" aria-current="page" href=""><i class="pi pi-comment"></i></a>
-
-            <a class="nav-link notification" @click="showNotifications"><i class="pi pi-bell" :style="{color:notification != none && notifications.length > 0 ? 'teal' : ''}"></i></a>
+            <a class="nav-link notification" @click="showNotifications"><i class="pi pi-bell" :style="{color:notifications != none && notifications.length > 0 ? 'light-green' : 'black'}"></i></a>
             <div v-if="showNotificationList" class="notifications">
                 <p>Уведомления</p>
                 <div v-for="notification in notifications" :key="notification.id">
@@ -57,11 +55,24 @@ export default{
 <style scoped>
 
 .navBar {
-    background-color: #292929;
+    background-color: #fff;
     padding:15px;
     display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
+    justify-content: space-between;
+}
+
+.navBar-search{
+    width: 300px;
+    height: 54px;
+    border-radius: 55px;
+    border: none;
+    background-color: #F7F8FA;
+    padding: 5px;
+}
+
+.navBar-search:hover, .navBar-search:focus{
+    border: 1px solid #a7f3d0;
+    box-shadow: 4px 4px 5px #a7f3d0, -4px -4px 5px #a7f3d0;
 }
 
 .navBar nav{
@@ -75,12 +86,6 @@ export default{
 
 .nav-link i{
     font-size: 1.5rem;
-    color:white
-}
-.nav-bar-logo{
-    height: 40px;
-    position: absolute; 
-    left: 50%; /* Добавлено */
 }
 
 .notifications{

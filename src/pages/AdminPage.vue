@@ -1,10 +1,10 @@
 <template>
     <div class="main">
-        <nav-bar style="position: fixed; z-index: 1000; top: 0;" :notifications="notifications"/>
+        <side-bar/>
         <div class="admin">
-            <side-bar/>
-            <div class="admin_content">
-                <div class="admin_content_wrapper">
+            <nav-bar :notifications="notifications"/>
+            <div class="admin_content_wrapper">
+                <div class="admin_content">
                     <div class="admin_content_left">
                         <tree-component :title="'выберите локацию'"/>
                     </div>
@@ -26,8 +26,6 @@ import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 import TreeComponent from '@/components/TreeComponent';
 import MapComponent from '@/components/MapComponent';
-import Toast from 'primevue/toast';
-
 
 export default {
     components: {
@@ -54,25 +52,33 @@ export default {
 </script>
 <style scoped>
 .main{
-    background: #e4e4e4;
-}
-.admin{
-    margin-top: 71px;
     display: grid;
     grid-template-columns: 300px auto;
 }
 
 .admin_content_wrapper{
+    background: #e4e4e4;
+    width: 100%;
+    height: 100vh;
+    border-radius: 21px 0 0 0;
+}
+
+.admin_content{
     display: grid;
     grid-template-columns: 50% 50%;
-    padding:  75px;
+    padding: 75px;
 }
+
+.admin_content_left{
+    margin: 0px 20px 0px 0px;
+}
+
+
 .map_content {
     display: flex;
     justify-content: center;
     background: white;
     border-radius: 21px;
-    height: 400px;
     padding-top: 20px;
 }
 

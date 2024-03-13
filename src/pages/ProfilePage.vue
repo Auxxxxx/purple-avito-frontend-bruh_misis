@@ -1,8 +1,8 @@
 <template>
     <div class="main">
-        <nav-bar/>    
+        <side-bar/>    
         <div class="profile">
-            <side-bar/>
+            <nav-bar/>
             <div class="profile_wrapper">
                 <div class="profile_content">
                     <profile-component 
@@ -37,15 +37,16 @@ export default {
 <style scoped>
 
 .main{
-    background: #e4e4e4;
-}
-.profile{
     display: grid;
     grid-template-columns: 300px auto;
 }
 
 .profile_wrapper{
     padding: 25px 80px;
+    background: #e4e4e4;
+    width: 100%;
+    height: 100vh;
+    border-radius: 21px 0 0 0;
 }
 
 .profile_content{
