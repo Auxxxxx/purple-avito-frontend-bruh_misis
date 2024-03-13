@@ -29,6 +29,7 @@ export default {
 .main{
     display: grid;
     grid-template-columns: 300px auto;
+    
 }
 
 .price_content{
@@ -36,6 +37,7 @@ export default {
     width: 100%;
     height: 100vh;
     border-radius: 21px 0 0 0;
+    
 }
 
 </style>

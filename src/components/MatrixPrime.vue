@@ -122,7 +122,7 @@ export default {
 }
 
 .matrixTable_title{
-    font-weight: 500;
+    font-weight: 700;
     font-size: 48px;
 }
 

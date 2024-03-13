@@ -4,11 +4,15 @@
         <div class="price">
             <nav-bar/>
             <div class="analytics_content">
-                <div class="calendar_content">
-                    <calendar-component/>
+                <div class="diagram_content">
                     <h3>Статистика</h3>
-                    <!-- Используйте компонент Diagram вместо div с классом "diagram" -->
                     <Diagram/>
+                <div class="grafic_content">
+                    <grafic/>
+                </div>
+                <div class="calendar_content">
+                    <CalendarComponent></CalendarComponent>
+                </div>
                 </div>
             </div>
         </div>
@@ -20,12 +24,14 @@ import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 import CalendarComponent from "@/components/Calendar"
 import TreeComponent from '@/components/TreeComponent.vue';
-import Diagram from '@/components/Diagram.vue'; // Убедитесь, что Diagram правильно импортирован
+import Diagram from '@/components/Diagram.vue'; 
+import Grafic from '@/components/Grafic.vue';
 
 export default {
     components: {
         SideBar, NavBar, CalendarComponent,
-        TreeComponent, Diagram // Убедитесь, что Diagram зарегистрирован здесь
+        TreeComponent, Diagram, Grafic,
+
     }
 }
 </script>
@@ -47,9 +53,15 @@ export default {
 }
 
 /* Добавьте стили для компонента Diagram, если это необходимо */
-.diagram {
-    /* Пример стилей */
-    width: 100%;
-    height: 400px; /* Настройте высоту по мере необходимости */
+.calendar_content {
+  order: 2; /* Большее значение переместит элемент правее */
+}
+
+.diagram_content {
+  order: 1;
+}
+
+.grafic_content {
+  order: 3; /* Меньшее значение переместит элемент левее */
 }
 </style>
