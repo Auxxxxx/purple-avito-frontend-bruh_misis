@@ -35,7 +35,7 @@ export default {
 .price_content{
     background: #e4e4e4;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     border-radius: 21px 0 0 0;
     
 }

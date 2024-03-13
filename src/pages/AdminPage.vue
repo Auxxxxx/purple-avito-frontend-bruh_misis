@@ -28,11 +28,10 @@ import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 import TreeComponent from '@/components/TreeComponent';
 import MapComponent from '@/components/MapComponent';
-import TreeVue from '@/components/Tree';
 
 export default {
     components: {
-        SideBar, NavBar, TreeComponent, MapComponent, TreeVue
+        SideBar, NavBar, TreeComponent, MapComponent
     },
     data(){
       return {
@@ -61,7 +60,7 @@ export default {
 .admin_content_wrapper{
     background: #e4e4e4;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     border-radius: 21px 0 0 0;
 }
 

@@ -54,7 +54,7 @@ export default {
 .analytics_content {
 
     background: #e4e4e4;
-    border-radius: 21px;
+    border-radius: 21px 0 0 0;
     padding: 30px 60px;
     height: 100vh;
 

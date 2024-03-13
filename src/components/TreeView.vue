@@ -6,6 +6,7 @@
             :value="nodes" 
             :filter="true" 
             filterMode="lenient" 
+            filterPlaceholder="Поиск..."
             ></Tree>
         </div>
     </div>
@@ -30,6 +31,8 @@ export default {
     },
     async mounted() {
         await NodeService.getTreeNodesCategory().then(data => this.nodes = data);
+        console.log(this.nodes);
+        console.log(typeof this.nodes);
     },
 
     // async mounted() {
@@ -73,7 +76,8 @@ export default {
             this.expandedKeys = {};
         },
         expandNode(node) {
-            this.expandedKeys[node.key] = true;
+            this.expandedKeys[(node.key).toString()] = true;
+            console.log();
 
             if (node.children && node.children.length) {
                 for (let child of node.children) {
