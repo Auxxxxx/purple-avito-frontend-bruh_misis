@@ -1,21 +1,22 @@
 <template>
     <div class="main">
         <side-bar/> 
-        <div class="price">
-            <nav-bar/>
-            <div class="analytics_content">
-                <div class="diagram_content">
-                    <h3>Статистика</h3>
-                    <Diagram/>
-                <div class="grafic_content">
-                    <grafic/>
-                </div>
-                <div class="calendar_content">
-                    <CalendarComponent></CalendarComponent>
-                </div>
-                </div>
+        <div class="analytics">
+        <NavBar></NavBar>
+        <div class="analytics_content">
+            <div class="diagram_content">
+                <h3>Статистика</h3>
+                <Diagram/>
+            </div>
+            <div class="grafic_content">
+                <h3>Анализ данных</h3>
+                <grafic/>
+            </div>
+            <div class="calendar_content">
+                <CalendarComponent></CalendarComponent>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
@@ -31,7 +32,6 @@ export default {
     components: {
         SideBar, NavBar, CalendarComponent,
         TreeComponent, Diagram, Grafic,
-
     }
 }
 </script>
@@ -39,29 +39,39 @@ export default {
 <style scoped>
 .main{
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 300px auto; /* Четыре колонки: боковая панель и три для компонентов */
 }
 
-.analytics_content{
+.analytics_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Три колонки для компонентов */
+    gap: 20px; /* Отступы между колонками */
+    padding: 30px 60px;
     background: #e4e4e4;
-    width: 100%;
     height: 100vh;
     border-radius: 21px 0 0 0;
-    display: grid;
-    padding: 30px 60px;
-    grid-template-columns: 300px 300px 300px;
 }
 
-/* Добавьте стили для компонента Diagram, если это необходимо */
-.calendar_content {
-  order: 2; /* Большее значение переместит элемент правее */
-}
-
+/* Стили для компонентов */
 .diagram_content {
-  order: 1;
+    background: white;
+    height: 30%;
+    border-radius: 30px; /* Уменьшенная высота для диаграммы */
 }
 
 .grafic_content {
-  order: 3; /* Меньшее значение переместит элемент левее */
+    background: white;
+    height: 50%;
+    border-radius: 30px;  /* Высота для графика остается прежней */
+}
+
+.calendar_content {
+    width: 100%; 
+}
+
+.diagram_content h3, .grafic_content h3 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 32px;
 }
 </style>

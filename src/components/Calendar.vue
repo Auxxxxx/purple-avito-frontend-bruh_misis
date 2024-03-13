@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <Calendar v-model="dates" selectionMode="range" :manualInput="false" :style="'height: 30px;'" />
+        <Calendar placeholder="Выберите дату"   v-model="dates" selectionMode="range" :manualInput="false" :style="'height: 30px;'" />
     </div>
 </template>
 
