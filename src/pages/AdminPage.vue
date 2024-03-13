@@ -91,14 +91,14 @@ export default {
 }
 .map_content {
   display: flex;
-  justify-content: center; /* Горизонтальное выравнивание */
-  align-items: center; /* Вертикальное выравнивание */
+  justify-content: center; 
+  align-items: center; 
   background: white;
   border-radius: 21px;
   padding-top: 20px;
   width: 90%;
   margin: 0 auto;
-  padding-bottom:20px; /* Автоматические отступы слева и справа для центрирования */
+  padding-bottom:20px; 
 }
 
 

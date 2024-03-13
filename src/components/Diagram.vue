@@ -52,5 +52,6 @@ const setChartOptions = () => {
 <style scoped>
 .card{
   border-radius:8px;
+  height: 380px;
 }
 </style>
