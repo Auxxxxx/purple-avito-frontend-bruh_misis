@@ -24,6 +24,15 @@ export default {
         this.nodes = await NodeService.getTreeNodesData();
     },
     methods: {
+        // async handleNodeExpand(node) {
+        // // Обработчик разворачивания узла
+        // if (node.children && node.children.length === 0) {
+        //     // Если у узла нет детей, загружаем их с сервера
+        //     const children = await NodeService.getNodeChildren(node.id);
+        //     // Обновляем данные узла
+        //     node.children = children;
+        // }
+        // },
         expandAll() {
             for (let node of this.nodes) {
                 this.expandNode(node);
@@ -34,15 +43,15 @@ export default {
         collapseAll() {
             this.expandedKeys = {};
         },
-        expandNode(node) {
-            this.expandedKeys[node.key] = true;
+        // expandNode(node) {
+        //     this.expandedKeys[node.id] = true;
 
-            if (node.children && node.children.length) {
-                for (let child of node.children) {
-                    this.expandNode(child);
-                }
-            }
-        }
+        //     if (node.children && node.children.length) {
+        //         for (let child of node.children) {
+        //             this.expandNode(child);
+        //         }
+        //     }
+        // }
     }
 }
 

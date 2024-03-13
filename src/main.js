@@ -14,13 +14,16 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import InputText from 'primevue/inputtext';
 import InputNumber from 'primevue/inputnumber';
-import Calendar from 'primevue/calendar'
+import Calendar from 'primevue/calendar';
+import Toast from 'primevue/toast';
+import ToastService from 'primevue/toastservice';
 
 import '@/assets/main.css'
 
 const app = createApp(App);
 
 app.use(PrimeVue);
+app.use(ToastService);
 
 app
     .component('Tree', Tree)
@@ -30,6 +33,7 @@ app
     .component('InputText', InputText)
     .component('InputNumber', InputNumber)  
     .component('Calendar', Calendar)
+    .component('Toast', Toast)
 
 app
     .use(router)

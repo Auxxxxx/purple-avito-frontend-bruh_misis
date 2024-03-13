@@ -1,4 +1,5 @@
 <template>
+  <toast :style="'z-index: 2000;'"/>
   <div class="app">
       <router-view></router-view>
   </div>
