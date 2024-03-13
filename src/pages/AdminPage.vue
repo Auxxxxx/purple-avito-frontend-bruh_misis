@@ -28,10 +28,11 @@ import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 import TreeComponent from '@/components/TreeComponent';
 import MapComponent from '@/components/MapComponent';
+import TreeVue from '@/components/Tree';
 
 export default {
     components: {
-        SideBar, NavBar, TreeComponent, MapComponent
+        SideBar, NavBar, TreeComponent, MapComponent, TreeVue
     },
     data(){
       return {
