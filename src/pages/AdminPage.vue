@@ -9,7 +9,7 @@
                         <tree-component :title="'выберите локацию'"/>
                     </div>
                     <div class="admin_content_right">
-                        <!-- <tree-component :title="'выберите категорию'"/> -->
+                        <tree-component :title="'выберите категорию'"/> 
                     </div>
                 </div>
                 <div class="map_content">  

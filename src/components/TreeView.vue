@@ -5,7 +5,7 @@
         :value="nodes" 
         :filter="true" 
         filterMode="lenient" 
-        class="w-full md:w-30rem"
+        class="search-bar"
         ></Tree>
     </div>
 </template>
@@ -49,10 +49,20 @@ export default {
 </script>
 
 <style scoped>
-.card{
-    width: 400px;
-    height: 250px;
-    background: #F2F2F2;
+.card {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.search-bar {
+    background: none;
+    border: none;
+    width: 100%;
+    max-width: 300px; /* Максимальная ширина */
+}
+
 
 </style>

@@ -10,7 +10,7 @@
                 <li><strong>имя:</strong> {{ name }}</li>
                 <li><strong>фамилия</strong> {{ last_name }}</li>
                 <li><strong>отчество:</strong> {{ surname }}</li>
-                <li><strong>дата Рождения:</strong> {{ dateBirthday }}</li>
+                <li><strong>дата рождения:</strong> {{ dateBirthday }}</li>
                 <li><strong>должность:</strong> {{ job_title }}</li>
                 <li><strong>пол:</strong> {{ gender }}</li>
             </ul>

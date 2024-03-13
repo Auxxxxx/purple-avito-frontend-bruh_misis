@@ -26,14 +26,11 @@ export default {
 
 <style scoped>
 .treeLocation_title{
-    font-family: 'Soyuz Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 32px;
     color: #0D0421;   
 }
 
-.treeLocation_tree{
-    margin-left: 15px;
-}
+
 
 </style>
