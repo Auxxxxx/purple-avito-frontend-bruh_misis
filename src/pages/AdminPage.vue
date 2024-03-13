@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <nav-bar style="position: fixed; z-index: 1000; top: 0;"/>
+        <nav-bar style="position: fixed; z-index: 1000; top: 0;" :notifications="notifications"/>
         <div class="admin">
             <side-bar/>
             <div class="admin_content">
@@ -26,11 +26,29 @@ import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 import TreeComponent from '@/components/TreeComponent';
 import MapComponent from '@/components/MapComponent';
+import Toast from 'primevue/toast';
 
 
 export default {
     components: {
         SideBar, NavBar, TreeComponent, MapComponent
+    },
+    data(){
+      return {
+        notifications: [],
+      }  
+    },
+    methods: {
+        addNotification(notification) {
+            this.notifications.push(notification);
+        },
+        showNotification(message){
+            this.$toast.add({ severity: 'info', summary: 'Информация', detail: message, life: 2000 })
+            this.addNotification(message);
+        }
+    },
+    mounted(){
+        this.showNotification('Добро пожаловать на сервис!');
     }
 }
 </script>
