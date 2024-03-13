@@ -14,6 +14,7 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import InputText from 'primevue/inputtext';
 import InputNumber from 'primevue/inputnumber';
+import Calendar from 'primevue/calendar'
 
 import '@/assets/main.css'
 
@@ -28,6 +29,7 @@ app
     .component('Column', Column)
     .component('InputText', InputText)
     .component('InputNumber', InputNumber)  
+    .component('Calendar', Calendar)
 
 app
     .use(router)

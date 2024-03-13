@@ -20,8 +20,8 @@ export default {
             expandedKeys: {}
         };
     },
-    mounted() {
-        NodeService.getTreeNodesData().then(data => this.nodes = data);
+    async mounted() {
+        this.nodes = await NodeService.getTreeNodesData();
     },
     methods: {
         expandAll() {

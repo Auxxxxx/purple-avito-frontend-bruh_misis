@@ -4,7 +4,9 @@
         <div class="price">
             <side-bar/>
             <div class="analytics_content">
-                
+                <calendar-component/>
+                <h3>Статистика</h3>
+                <diagram-vue/>
             </div>
         </div>
     </div>
@@ -15,10 +17,11 @@
 
 import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
+import CalendarComponent from "@/components/Calendar"
 
 export default {
     components: {
-        SideBar, NavBar
+        SideBar, NavBar, CalendarComponent
     }
 }
 </script>
@@ -31,6 +34,10 @@ export default {
 .price{
     display: grid;
     grid-template-columns: 300px auto;
+}
+
+.analytics_content{
+    padding: 30px 60px;
 }
 
 </style>
