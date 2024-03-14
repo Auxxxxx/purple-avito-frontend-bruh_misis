@@ -1,19 +1,3 @@
-# purple-avito-frontend-bruh_misis
+# Решение BruhMisis для трека Авито на хакатоне Purple It Hack
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Документация и запуск: https://github.com/Auxxxxx/purple-avito-backend-bruh_misis
