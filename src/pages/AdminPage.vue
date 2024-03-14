@@ -35,7 +35,9 @@ export default {
     },
     data(){
       return {
-        notifications: [],
+        notifications: [
+            "У вас новое сообщение", "Аналитик такой-то изменил цену на категорию"
+        ],
       }  
     },
     methods: {

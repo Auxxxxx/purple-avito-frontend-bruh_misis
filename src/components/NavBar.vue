@@ -2,7 +2,7 @@
     <div class="navBar">
         <input type="search" placeholder="Поиск" class="navBar-search">
         <nav>
-            <a class="nav-link notification" @click="showNotifications"><i class="pi pi-bell" :style="{color:notifications != none && notifications.length > 0 ? 'light-green' : 'black'}"></i></a>
+            <a class="nav-link notification" @click="showNotifications"><i class="pi pi-bell" :style="{color:notifications !== none && notifications.length > 0 ? 'light-green' : 'black'}"></i></a>
             <div v-if="showNotificationList" class="notifications">
                 <p>Уведомления</p>
                 <div v-for="notification in notifications" :key="notification.id">
@@ -109,13 +109,15 @@ export default{
 }
 
 .notifications{
-    position: fixed;
+    position: absolute;
+    top: calc(100% + 10px);
     top: 70px;
     right: 20px;
     background-color: white;
     padding: 15px;
     border-radius: 0 0 20px 20px;
     box-shadow: 4px 4px 15px gray;
+    z-index: 1000;
 }
 
 </style>

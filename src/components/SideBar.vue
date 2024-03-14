@@ -9,7 +9,7 @@
                 <side-item :iconClass="'pi pi-map'" :sideText="'Локации и категории'"  @click="$router.push('/admin')" />
                 <side-item :iconClass="'pi pi-chart-bar'" :sideText="'Ценовая матрица'"  @click="$router.push('/priceMatrix')"/>
                 <side-item :iconClass="'pi pi-chart-line'" :sideText="'Аналитика и отчеты'"  @click="$router.push('/analytics')"/>
-                <side-item :iconClass="'pi pi-comment'" :sideText="'Сообщения'"/>
+                <side-item :iconClass="'pi pi-comment'" :sideText="'Сообщения'"  @click="$router.push('/message')"/>
                 
             </div>
             <side-item :iconClass="'pi pi-sign-out'" :sideText="'Выход'" @click="$router.push('/')" />
