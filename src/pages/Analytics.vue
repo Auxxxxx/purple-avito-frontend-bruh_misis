@@ -2,7 +2,7 @@
     <div class="main">
         <side-bar/> 
         <div class="analytics">
-        <NavBar></NavBar>
+        <nav-bar/>
         <div class="analytics_content">
             <div class="analytics_wrapper">
             <div class="diagram_content">
@@ -12,6 +12,7 @@
             <div class="grafic_content">
                 <h3>Анализ данных</h3>
                 <grafic/>
+                <grafic style="margin-top: 40px;"/>
             </div>
             <div class="calendar_content">
                 <div class="Calendar">
@@ -62,20 +63,16 @@ export default {
 
 .analytics_wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px; 
     border-radius: 21px 0 0 0;
 }
-.diagram_content {
-    background: white;
-    height: 50%;
-    border-radius: 30px; 
-}
 
-.grafic_content {
-    background: white;
-    height: 50%;
-    border-radius: 30px;  
+.diagram_content, .grafic_content, .calendar_content {
+  background: white;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 2px 2px 3px rgb(211, 211, 211), -2px -2px 3px rgb(214, 214, 214);
 }
 
 .calendar_content {
@@ -83,15 +80,12 @@ export default {
 }
 
 .diagram_content h3, .grafic_content h3 {
-    font-weight: 700;
-    text-align: center;
-    font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 32px;
 }
+
 .grafic_vertical{
     margin-top: 20px;
-    width: 65%;
-}
-.Calendar{
-    margin-left: 30px;
 }
 </style>

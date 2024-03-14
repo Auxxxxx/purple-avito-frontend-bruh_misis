@@ -87,7 +87,7 @@ export default{
     border-radius: 55px;
     border: none;
     background-color: #F7F8FA;
-    padding: 5px;
+    padding: 20px;
 }
 
 .navBar-search:hover, .navBar-search:focus{

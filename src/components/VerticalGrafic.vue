@@ -79,3 +79,12 @@ const setChartOptions = () => {
     };
 }
 </script>
+
+<style scoped>
+
+.card{
+    border-radius: 30px;
+    box-shadow: 2px 2px 3px rgb(211, 211, 211), -2px -2px 3px rgb(214, 214, 214);
+}
+
+</style>
