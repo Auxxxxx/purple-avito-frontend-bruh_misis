@@ -7,11 +7,11 @@
                 <div class="admin_content">
                     <div class="admin_content_left">
                         <h3>Выберите локацию</h3>
-                        <tree-component/>
+                        <tree-component :isLocation="true"/>
                     </div>
                     <div class="admin_content_right">
                         <h3>Выберите категорию</h3>
-                        <tree-component/> 
+                        <tree-component :isLocation="false"/> 
                     </div>
                 </div>
                 <div class="map_content">  

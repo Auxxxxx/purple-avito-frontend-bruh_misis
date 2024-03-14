@@ -2,7 +2,7 @@
     <div class="treeLocation">
         <div class="treeLocation-content">
             <div class="treeLocation_tree">
-                <tree-view/>
+                <tree-view :isLocation='isLocation'/>
             </div>
         </div>
     </div>
@@ -19,6 +19,10 @@ export default {
     props:{
         title: {
             type: String,
+            required: true
+        },
+        isLocation: {
+            type: Boolean,
             required: true
         }
     }

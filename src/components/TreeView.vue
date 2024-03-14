@@ -20,7 +20,7 @@ export default {
         return {
             nodes: null,
             expandedKeys: {},
-            containerHeight: 300, // Высота контейнера дерева
+            containerHeight: 300,
         };
     },
     props:{
@@ -30,22 +30,18 @@ export default {
         }
     },
     async mounted() {
-        await NodeService.getTreeNodesCategory().then(data => this.nodes = data);
-        console.log(this.nodes);
-        console.log(typeof this.nodes);
+        let treeData;
+        if(this.isLocation){
+            treeData = await NodeService.getTreeNodesLocation();
+        } else{
+            treeData = await NodeService.getTreeNodesCategory();
+        }
+        // Преобразуем полученные данные в нужный формат
+        this.nodes = treeData;
     },
-
-    // async mounted() {
-    //     let treeData;
-    //     if(this.isLocation){
-    //         treeData = await NodeService.getTreeNodesLocation();
-    //     } else{
-    //         treeData = await NodeService.getTreeNodesCategory();
-    //     }
-    //     // Преобразуем полученные данные в нужный формат
-    //     this.nodes = treeData;
-    // },
     methods: {
+
+        // TODO: ХОТЕЛИ ДОБАВИТЬ ЛЕНИВУЮ ЗАГРУЗКУ УЗЛОВ
         // async loadInitialNodes() {
         //     let treeData;
         //     if (this.isLocation) {
@@ -65,6 +61,7 @@ export default {
         //         this.$set(node, 'children', children);
         //     }
         // },
+
         expandAll() {
             for (let node of this.nodes) {
                 this.expandNode(node);
